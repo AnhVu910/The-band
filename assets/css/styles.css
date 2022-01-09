@@ -1,14 +1,19 @@
-*{ /* reset CSS*/
+* {
+    /* reset CSS*/
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
 /*Dùng chung*/
+
 html {
-    scroll-behavior: smooth;/* điều chỉnh sự di chuyển trên trang web*/
+    scroll-behavior: smooth;
+    /* điều chỉnh sự di chuyển trên trang web*/
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .mt-8 {
     margin-top: 8px;
 }
@@ -16,6 +21,7 @@ html {
 .mt-16 {
     margin-top: 16px;
 }
+
 .clear {
     clear: both;
 }
@@ -26,10 +32,11 @@ html {
 }
 
 .row::after {
-    content:"";
+    content: "";
     display: block;
     clear: both;
 }
+
 .col {
     float: left;
     padding-left: 8px;
@@ -43,6 +50,7 @@ html {
 .col-2 {
     width: 50%;
 }
+
 .col-full {
     width: 100%;
 }
@@ -54,61 +62,69 @@ html {
 .col-5 {
     width: 20%;
 }
-/*main*/
-#main {
 
-}
+
+/*main*/
+
+#main {}
 
 
 /*Nav*/
+
 #nav {
     display: inline-block;
 }
-#nav, .navphu {
+
+#nav,
+.navphu {
     list-style-type: none;
 }
-#nav > li {
+
+#nav>li {
     display: inline-block;
-    
 }
 
 #nav li {
-    
     position: relative;
 }
 
 #nav .navphu {
-
-    display: none; /*an menu*/
-    position: absolute; 
+    display: none;
+    /*an menu*/
+    position: absolute;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0 ,0 , 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 #nav .navphu a {
     color: #000;
 }
 
-#nav > li > a {
+#nav>li>a {
     color: #fff;
     text-transform: uppercase;
-
 }
+
 #nav li a {
-    
     text-decoration-line: none;
-    line-height: 46px ;
+    line-height: 46px;
     padding: 0 24px;
     display: block;
 }
+
 #nav li:hover .navphu {
     display: block;
 }
 
-#nav > li:hover > a , #nav .navphu li:hover {
+#nav>li:hover>a,
+#nav .navphu li:hover {
     color: #000;
     background-color: #ccc;
 }
+
+
 /*Slider*/
+
 #slider {
     min-height: 500px;
     background-color: #333;
@@ -129,86 +145,99 @@ html {
 #slider .nd {
     font-weight: 400;
     font-size: 24px;
-
 }
 
 #slider .motaslider1 {
     font-size: 15px;
     margin-top: 25px;
-    
 }
 
+
 /*Header*/
+
 #header {
-    height:46px;
+    height: 46px;
     background-color: #000;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
     line-height: 46px;
-    
 }
+
+#header .moblie-menu,
 #header .search {
     float: right;
     padding: 0 21px;
-    
 }
+
 #header .search:hover {
     background-color: #f44336;
     cursor: pointer;
 }
 
-/*Content*/
-#content {
-
+#header .moblie-menu:hover {
+    background-color: #ccc;
 }
+
+#header .moblie-menu:hover .menu-icon {
+    color: #000;
+}
+
+
+/*Content*/
+
+#content {}
+
 #content .thanhphan {
     width: 800px;
+    max-width: 100%;
     padding: 64px 16px;
     margin-left: auto;
     margin-right: auto;
- 
-
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .tpheading {
     text-align: center;
     letter-spacing: 4px;
-   font-size: 30px;
-   font-weight: 400;
-   margin: 10px 0;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
 }
+
 #content .tpmotaheading {
     text-align: center;
     font-size: 15px;
     margin: 15px 0;
     font-style: italic;
-    opacity: 0.60   ;
-
+    opacity: 0.60;
 }
+
 #content .gthieu {
     text-align: justify;
     margin: 15px 0;
     font-size: 15px;
     line-height: 1.5;
 }
-#content .member {
-    padding-top: 32px;  
-    padding-bottom: 32px;  
-}
 
+#content .member {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 
 #content .member-name {
     font-size: 15px;
     margin: 15px 0;
-
 }
 
 #content .name {
@@ -217,13 +246,15 @@ html {
     border-radius: 4px;
 }
 
+
 /* Tour*/
+
 .tptour {
     background-color: rgb(153, 150, 150);
 }
 
 .ds-ve {
-    list-style-type: none ;
+    list-style-type: none;
 }
 
 .ds-ve li {
@@ -252,9 +283,13 @@ html {
     line-height: 25px;
     margin-top: -3px;
 }
+
+
 /*place*/
+
 .dsplace .name1 {
     width: 245px;
+    max-width: 100%;
     height: 245px;
     display: block;
 }
@@ -263,27 +298,29 @@ html {
     opacity: 0.7;
 }
 
-
 .dsplace {
-   margin-top: 32px;
- padding-bottom: 32px;
-
+    margin-top: 32px;
+    padding-bottom: 32px;
 }
+
 .ndplace {
     background-color: rgb(156, 44, 44);
     padding: 0.2px 16px;
 }
-.nd1, .mota {
+
+.nd1,
+.mota {
     margin: 15px 0;
     font-size: 15px;
 }
+
 .time {
     margin: 15px 0;
     font-size: 15px;
     opacity: 0.5;
 }
+
 .buyticket {
-    
     color: #fff;
     background-color: #000;
     padding: 11px 13px;
@@ -291,7 +328,6 @@ html {
     margin-bottom: 16px;
     text-decoration-line: none;
 }
-
 
 .buyticket:hover {
     color: #000;
@@ -301,7 +337,10 @@ html {
 .mota {
     line-height: 1.5;
 }
+
+
 /*contact*/
+
 .infor {
     margin-bottom: 16px;
     font-size: 18px;
@@ -309,23 +348,23 @@ html {
 }
 
 .infor i[class*="ti-"] {
-    padding-right: 20px;   
+    padding-right: 20px;
 }
 
 .control {
     padding: 32px 0;
-
 }
+
 .form-control {
     font-size: 15px;
-
 }
+
 .form-control .name2 {
     padding: 11px 8px;
     border: 1px solid #ccc;
-    
     width: 100%;
 }
+
 .form-control .form-sub {
     margin-bottom: 16px;
     padding: 8px 16px;
@@ -333,8 +372,8 @@ html {
     color: #fff;
     border: none;
     float: right;
-    
 }
+
 .form-control .form-sub:hover {
     color: #000;
     background-color: #ccc;
@@ -345,16 +384,15 @@ html {
     width: 100%;
 }
 
-/*Cuoi trang*/
-#footer {
-   padding: 64px 16px;
-   
 
-  
+/*Cuoi trang*/
+
+#footer {
+    padding: 64px 16px;
 }
+
 #footer .mxh {
     font-size: 24px;
-
 }
 
 #footer .mxh a {
@@ -369,11 +407,8 @@ html {
 .mota-mxh {
     font-size: 15px;
     margin: 15px 0;
-   
 }
+
 .mota-mxh a {
-    
-   color: #000;
+    color: #000;
 }
-
-
