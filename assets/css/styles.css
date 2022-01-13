@@ -163,7 +163,6 @@ html {
     right: 0;
     left: 0;
     z-index: 1;
-    overflow: hidden;
 }
 
 #header .menu-icon,
@@ -171,6 +170,13 @@ html {
     color: #fff;
     font-size: 20px;
     line-height: 46px;
+}
+
+#header .moblie-menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
 }
 
 #header .moblie-menu,
@@ -294,12 +300,12 @@ html {
     display: block;
 }
 
-.dsplace .name:hover {
+.dsplace .name1:hover {
     opacity: 0.7;
 }
 
 .dsplace {
-    margin-top: 32px;
+    margin-top: 16px;
     padding-bottom: 32px;
 }
 
@@ -327,6 +333,7 @@ html {
     display: inline-block;
     margin-bottom: 16px;
     text-decoration-line: none;
+    text-align: center;
 }
 
 .buyticket:hover {

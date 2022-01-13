@@ -17,18 +17,18 @@
         <div id="header">
             <ul id="nav">
                 <!-- bắt đầu nav-->
-                <li><a href="">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#band">Band</a></li>
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="">
+                <li><a href="#">
                     More
                     <i class="ti-angle-down"></i>
                 </a>
                     <ul class="navphu">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
 
@@ -108,34 +108,34 @@
 
                     <!--place-->
                     <div class="row dsplace">
-                        <div class="col col-3">
+                        <div class="col col-3 mt-16">
                             <img src="./assets/img/place/newyork.jpg" alt="New York" class="name1">
                             <div class="ndplace">
                                 <h3 class="nd1">New York</h3>
                                 <p class="time">Fri 27 Nov 2021</p>
                                 <p class="mota">Excellent people are not scary, awesome people are excellent people who put more effort than you!</p>
-                                <a href="#" class="buyticket">Buy Tickets </a>
+                                <a href="#" class="buyticket s-full-width">Buy Tickets </a>
                             </div>
                         </div>
 
 
-                        <div class="col col-3">
+                        <div class="col col-3 mt-16">
                             <img src="./assets/img/place/londonnight.jpg" alt="LonDon" class="name1">
                             <div class="ndplace">
                                 <h3 class="nd1">LonDon</h3>
                                 <p class="time">Fri 27 Nov 2021</p>
                                 <p class="mota">Excellent people are not scary, awesome people are excellent people who put more effort than you!</p>
-                                <a href="#" class="buyticket">Buy Tickets </a>
+                                <a href="#" class="buyticket s-full-width">Buy Tickets </a>
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3 mt-16">
                             <img src="./assets/img/place/tokyo.jpg" alt="Tokyo" class="name1">
                             <div class="ndplace">
                                 <h3 class="nd1">Tokyo</h3>
                                 <p class="time">Fri 27 Nov 2021</p>
                                 <p class="mota">Excellent people are not scary, awesome people are excellent people who put more effort than you!</p>
-                                <a href="#" class="buyticket">Buy Tickets </a>
+                                <a href="#" class="buyticket s-full-width">Buy Tickets </a>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                                     <input type="text" name="" placeholder="Name" required id="" class="name2">
                                 </div>
 
-                                <div class="col col-2">
+                                <div class="col col-2 s-mt-8">
                                     <input type="email" name="" placeholder="Email" required id="" class="name2">
                                 </div>
 
@@ -174,7 +174,7 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="name2">
                                 </div>
                             </div>
-                            <input class="form-sub mt-16 " type="submit" value="SEND">
+                            <input class="form-sub s-full-width mt-16 " type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -195,21 +195,40 @@
                 <a href="#"><i class="ti-linkedin"></i></a>
                 <a href="#"><i class="ti-stack-overflow"></i></a>
             </div>
-            <p class="mota-mxh">Powered by <a href=""> w3.css</a></p>
+            <p class="mota-mxh">Powered by <a href=""> AnhVu</a></p>
         </div>
     </div>
 
     <script>
         var header = document.getElementById('header');
         var menuMoblie = document.getElementById('menu-mobile');
+        var headerHeight = header.clientHeight;
+
+        //Dong mo moblie menu
         menuMoblie.onclick = function() {
-            var isClose = header.clientHeight === 46; // ktra header.clientHeight co bang 46 hay khong sau do gan lai vao bien isClose
+            var isClose = header.clientHeight === headerHeight; // ktra header.clientHeight co bang 46 hay khong sau do gan lai vao bien isClose
             if (isClose) {
                 header.style.height = 'auto';
             } else {
-                header.style.height = '46px';
+                header.style.height = null;
             }
 
+        }
+
+        // Dong menu
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('navphu'); // tao bien co gia tri la true hoac false vs dieu kien co menu phu hay khong va menu phu co ten la navphu
+                if (!isParentMenu) {
+                    header.style.height = null;
+                } else {
+                    event.preventDefault(); // bat su kien va bo qua cai dat mac dinh cu the la href="#"
+                }
+
+            }
         }
     </script>
 

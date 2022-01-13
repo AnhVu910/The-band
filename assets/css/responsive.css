@@ -11,10 +11,62 @@
 /* mobile*/
 
 @media (max-width: 740px) {
-    #nav>li {
-        display: block;
+    .s-full-width {
+        width: 100% !important;
+    }
+    .s-mt-8 {
+        margin-top: 8px !important;
+    }
+    #header {
+        overflow: hidden
     }
     #header .search {
         display: none;
+    }
+    #header .moblie-menu {
+        display: block;
+    }
+    #nav {
+        display: block;
+    }
+    #nav>li {
+        display: block;
+    }
+    #nav>li:first-child {
+        display: inline-block;
+    }
+    #nav .navphu {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .navphu a {
+        color: #fff;
+        padding: 5px 50px;
+    }
+    #nav li a {
+        padding: 1px 24px;
+    }
+    .col-5 {
+        margin-top: 30px;
+        width: 100%;
+    }
+    .col-3 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+    }
+    #content .name {
+        width: 60%;
+        height: auto;
+    }
+    #slider {
+        min-height: 100%;
+    }
+    #slider .nd-slider {
+        display: none;
+    }
+    .dsplace .name1 {
+        width: 100%;
     }
 }
