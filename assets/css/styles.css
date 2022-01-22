@@ -140,15 +140,16 @@ html {
     bottom: 48px;
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 1px #000;
 }
 
 #slider .nd {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 #slider .motaslider1 {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 25px;
 }
 
@@ -379,6 +380,7 @@ html {
     color: #fff;
     border: none;
     float: right;
+    -webkit-appearance: none;
 }
 
 .form-control .form-sub:hover {
